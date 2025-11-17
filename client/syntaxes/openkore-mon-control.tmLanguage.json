@@ -1,0 +1,56 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "OpenKore Monster Control",
+    "scopeName": "source.openkore-mon-control",
+    "fileTypes": [
+        "txt"
+    ],
+    "patterns": [
+        {
+            "name": "comment.line.hash.openkore-mon-control",
+            "match": "#.*$"
+        },
+        {
+            "name": "meta.monster-entry.openkore-mon-control",
+            "match": "^\\s*(.+?)\\s+(-?[0-3])\\s+(-?\\d+)\\s+([01])\\s*$",
+            "captures": {
+                "1": {
+                    "name": "variable.other.monster-name.openkore-mon-control"
+                },
+                "2": {
+                    "name": "constant.numeric.attack.openkore-mon-control"
+                },
+                "3": {
+                    "name": "constant.numeric.teleport.openkore-mon-control"
+                },
+                "4": {
+                    "name": "constant.language.search.openkore-mon-control"
+                }
+            }
+        },
+        {
+            "name": "meta.monster-entry.with-skillcancel.openkore-mon-control",
+            "match": "^\\s*(.+?)\\s+(-?[0-3])\\s+(-?\\d+)\\s+([01])\\s+([01])(?:\\s+(-?\\d+(?:\\.\\d+)?))*\\s*$",
+            "captures": {
+                "1": {
+                    "name": "variable.other.monster-name.openkore-mon-control"
+                },
+                "2": {
+                    "name": "constant.numeric.attack.openkore-mon-control"
+                },
+                "3": {
+                    "name": "constant.numeric.teleport.openkore-mon-control"
+                },
+                "4": {
+                    "name": "constant.language.search.openkore-mon-control"
+                },
+                "5": {
+                    "name": "constant.language.skillcancel.openkore-mon-control"
+                },
+                "6": {
+                    "name": "constant.numeric.optional.openkore-mon-control"
+                }
+            }
+        }
+    ]
+}

@@ -30,10 +30,49 @@
           "OpenKore Config",
           "openkore-config"
         ],
-        "extensions": [
-          ".txt"
+        "filenames": [
+          "config.txt"
         ],
         "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "openkore-items-control",
+        "aliases": [
+          "OpenKore Items Control",
+          "openkore-items-control"
+        ],
+        "filenames": [
+          "items_control.txt"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "openkore-mon-control",
+        "aliases": [
+          "OpenKore Monster Control",
+          "openkore-mon-control"
+        ],
+        "filenames": [
+          "mon_control.txt"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "openkore-config",
+        "scopeName": "source.openkore-config",
+        "path": "./syntaxes/openkore-config.tmLanguage.json"
+      },
+      {
+        "language": "openkore-items-control",
+        "scopeName": "source.openkore-items-control",
+        "path": "./syntaxes/openkore-items-control.tmLanguage.json"
+      },
+      {
+        "language": "openkore-mon-control",
+        "scopeName": "source.openkore-mon-control",
+        "path": "./syntaxes/openkore-mon-control.tmLanguage.json"
       }
     ]
   }

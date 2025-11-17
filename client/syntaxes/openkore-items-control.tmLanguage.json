@@ -1,0 +1,62 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "OpenKore Items Control",
+    "scopeName": "source.openkore-items-control",
+    "fileTypes": [
+        "txt"
+    ],
+    "patterns": [
+        {
+            "name": "comment.line.hash.openkore-items-control",
+            "match": "#.*$"
+        },
+        {
+            "name": "meta.item-entry.quoted.openkore-items-control",
+            "match": "^\\s*(\"[^\"]*\")\\s+(\\d+)\\s+([01])\\s+([01])(?:\\s+([01]))?(?:\\s+([01]))?",
+            "captures": {
+                "1": {
+                    "name": "string.quoted.double.item-name.openkore-items-control"
+                },
+                "2": {
+                    "name": "constant.numeric.minimum.openkore-items-control"
+                },
+                "3": {
+                    "name": "constant.language.openkore-items-control"
+                },
+                "4": {
+                    "name": "constant.language.openkore-items-control"
+                },
+                "5": {
+                    "name": "constant.language.openkore-items-control"
+                },
+                "6": {
+                    "name": "constant.language.openkore-items-control"
+                }
+            }
+        },
+        {
+            "name": "meta.item-entry.unquoted.openkore-items-control",
+            "match": "^\\s*(.+?)\\s+(\\d+)\\s+([01])\\s+([01])(?:\\s+([01]))?(?:\\s+([01]))?(?:\\s*#|\\s*$)",
+            "captures": {
+                "1": {
+                    "name": "variable.other.item-name.openkore-items-control"
+                },
+                "2": {
+                    "name": "constant.numeric.minimum.openkore-items-control"
+                },
+                "3": {
+                    "name": "constant.language.openkore-items-control"
+                },
+                "4": {
+                    "name": "constant.language.openkore-items-control"
+                },
+                "5": {
+                    "name": "constant.language.openkore-items-control"
+                },
+                "6": {
+                    "name": "constant.language.openkore-items-control"
+                }
+            }
+        }
+    ]
+}
