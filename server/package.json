@@ -1,15 +1,15 @@
 {
-  "name": "REPLACE_ME",
-  "description": "REPLACE_ME",
+  "name": "openkore-lsp-server",
+  "description": "OpenKore Language Server Protocol implementation",
   "version": "1.0.0",
-  "author": "REPLACE_ME",
+  "author": "justJay-dev",
   "license": "MIT",
   "engines": {
     "node": "*"
   },
   "repository": {
     "type": "git",
-    "url": "REPLACE_ME"
+    "url": "https://github.com/justJay-dev/openkore-lsp.git"
   },
   "dependencies": {
     "@types/node": "^24.10.1",
