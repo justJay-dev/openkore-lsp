@@ -1,0 +1,72 @@
+{
+  "name": "openkore-lsp",
+  "displayName": "OpenKore LSP",
+  "description": "Language Server Protocol extension for OpenKore configuration files with autocomplete, hover info, validation, and navigation",
+  "author": "justJay-dev",
+  "license": "MIT",
+  "version": "1.0.0",
+  "publisher": "justJay-dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justJay-dev/openkore-lsp"
+  },
+  "categories": [
+    "Linters",
+    "Programming Languages"
+  ],
+  "keywords": [
+    "openkore",
+    "bot",
+    "ragnarok",
+    "config",
+    "lsp",
+    "language-server"
+  ],
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "activationEvents": [
+    "workspaceContains:control/*.txt",
+    "onFileSystem:file"
+  ],
+  "main": "./client/out/extension",
+  "contributes": {
+    "languages": [
+      {
+        "id": "openkore-config",
+        "aliases": [
+          "OpenKore Config",
+          "openkore-config"
+        ],
+        "extensions": [],
+        "filenames": [
+          "config.txt"
+        ],
+        "filenamePatterns": [
+          "**/control/*.txt"
+        ],
+        "configuration": "./client/language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "openkore-config",
+        "scopeName": "source.openkore-config",
+        "path": "./client/syntaxes/openkore-config.tmLanguage.json"
+      }
+    ],
+    "configuration": {}
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -b",
+    "watch": "tsc -b -w",
+    "package": "npm run compile && mkdir -p dist && vsce package -o dist/",
+    "postinstall": "cd client && npm install && cd ../server && npm install && cd .."
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.7",
+    "@vscode/vsce": "^3.7.0",
+    "typescript": "^5.2.2"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "openkore-lsp-client",
+  "description": "OpenKore Language Server Client",
+  "author": "justJay-dev",
+  "license": "MIT",
+  "version": "0.0.1",
+  "publisher": "justJay-dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justJay-dev/openkore-lsp"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "dependencies": {
+    "@types/node": "^24.10.1",
+    "vscode-languageclient": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.81.0"
+  },
+  "scripts": {
+    "compile": "tsc -p ./"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "openkore-config",
+        "aliases": [
+          "OpenKore Config",
+          "openkore-config"
+        ],
+        "extensions": [
+          ".txt"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ]
+  }
+}
