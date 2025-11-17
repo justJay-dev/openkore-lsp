@@ -6,3 +6,4 @@ tsconfig.tsbuildinfo
 openkore
 dist
 *.vsix
+.DS_Store
